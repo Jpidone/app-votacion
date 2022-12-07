@@ -1,0 +1,24 @@
+<div class="col-md-4 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Ingrese sus Datos</h3>
+        </div>
+        <img src="/img/logo-qatar.jpg" class=" mx-auto d-block m-2 logo" alt="">
+        <div class="card-body">
+            <form action="/users/signin" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombreUsuario" class="form-control" placeholder="Ingrese Su Nombre" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="DNI" class="form-control" placeholder="Ingrese su DNI" >
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">
+                        Ingresar
+                    </button>
+                </div>
+                <a href="/users/signup"> Si eres un nuevo usuario Registrate</a>
+            </form>
+        </div>
+    </div>
+</div>

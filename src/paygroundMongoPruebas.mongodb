@@ -1,0 +1,56 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('votacion-app');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+
+//db.votantes.findOneAndUpdate({nombreUsuario: "Miriam"}, {$set : {habilitado: true}});
+
+//db.votantes.findOne({nombreUsuario: "Miriam"});
+
+// db.votantes.updateMany({habilitado: false},{$set : {habilitado: true}});
+
+// //db.votantes.deleteOne({nombreUsuario: "Mario"});
+
+// db.candidatos.findOneAndUpdate({nombrePais: "Marruecos"}, {/**
+//  * field: The field name
+//  * expression: The expression.
+//  */
+// $set: {
+//   votos: 7
+// }});
+
+// db.candidatos.findOneAndUpdate({nombrePais: "Corea del Sur"}, {/**
+//  * field: The field name
+//  * expression: The expression.
+//  */
+// $set: {
+//   votos: 93
+// }});
+
+// db.candidatos.findOneAndUpdate({nombrePais: "Croacia"}, {/**
+//  * field: The field name
+//  * expression: The expression.
+//  */
+// $set: {
+//   votos: 190
+// }});
+
+//db.votantes.findOneAndUpdate({nombreUsuario: "Javier"}, {$set : {Admin: true}});
+
+db.votantes.findOneAndDelete({nombreUsuario: "Mario"});
+
+
+
+
+
+
+
+
+
+

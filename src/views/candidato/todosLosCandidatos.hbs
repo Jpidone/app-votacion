@@ -1,0 +1,44 @@
+{{#each candidato}}
+<div class="card">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <div class="group-form mt-3">
+            <img src={{imgBandera}} class="img-fluid rounded-start bandera"  alt="">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{{nombrePais}}}</h5>
+                <p class="card-text">{{nombreFederacion}}</p>
+              
+            <div class="progress" style="height: 30px;">
+                <div class="progress-bar bg-secondary" role="progressbar" style="" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100" id={{nombrePais}}> {{porcentaje}}%</div>
+            </div>
+            <br>
+            <form class="group-form">
+                <a type="submit" class="btn btn-primary btn-block btn-sm" href="/candidato/votar/{{_id}}">
+                    VOTAR
+                </a>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+ <script>
+  
+ </script>
+{{/each}}
+{{#each candidato}}
+<script>
+    var barra = document.getElementById("{{nombrePais}}");
+    barra.style = "width: " + {{ porcentaje }}+"%";
+    barra = null; 
+    //var  banderita = document.getElementById("{{_id}}");
+    
+    //var url = "/img" + {{nombrePais}} + ".svg";
+    //comsole.log(url);
+   // banderita.src = url; 
+</script>
+{{/each}}

@@ -1,0 +1,19 @@
+<div class="row">
+    {{#each candidato}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title d-flex justify-content-between alig-items-center">
+                    {{nombrePais}} 
+                </h5>
+                <p>{{nombreFederacion}}</p>
+                <p>Votos: {{votos}}</p>
+                <form action="/candidato/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block btn-sm">Borrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
